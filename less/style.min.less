@@ -1,84 +1,4 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -87,19 +7,7 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
   display: block;
 }
 
@@ -153,7 +61,7 @@ html {
   font-family: "Arial";
   line-height: 40px;
   color: white;
-  font-size: 16px;
+  font-size: 24px;
   margin: auto;
   text-align: center;
   padding-top: 200px;
@@ -207,7 +115,7 @@ a:hover {
   transform-style: preserve-3d;
 }
 
-.parallax__layer {
+.parallax_TP {
   position: absolute;
   top: 0;
   left: 0;
@@ -219,19 +127,19 @@ a:hover {
   height: 100%;
 }
 
-.parallax__layer--base {
+.parallax_TP--base {
   height: 100%;
   z-index: -2;
 }
 
-.parallax__layer--rocks {
+.parallax_TP--rocks {
   transform: translateZ(-1px) scale(2);
   background-image: url("../svg/mountain4.svg");
   margin-top: 78%;
   z-index: -3;
 }
 
-.parallax__layer--river {
+.parallax_TP--river {
   position: fixed;
   transform: translateZ(-2px) scale(3);
   background-image: url("../svg/mountain2.svg");
@@ -239,7 +147,7 @@ a:hover {
   z-index: -4;
 }
 
-.parallax__layer--back {
+.parallax_TP--back {
   position: fixed;
   transform: translateZ(-3px) scale(4);
   background-image: url("../svg/mountain3.svg");
@@ -247,7 +155,7 @@ a:hover {
   z-index: -5;
 }
 
-.parallax__layer--deep {
+.parallax_TP--deep {
   position: fixed;
   transform: translateZ(-4px) scale(5);
   background-image: url("../svg/mountain1.svg");
@@ -255,7 +163,7 @@ a:hover {
   z-index: -6;
 }
 
-.parallax__layer--face-a {
+.parallax_TP--face-a {
   position: fixed;
   transform: translateZ(0) scale(1);
   background-image: url("../svg/Phonya.svg");
@@ -264,7 +172,7 @@ a:hover {
   z-index: -7;
 }
 
-.parallax__layer--face-b {
+.parallax_TP--face-b {
   position: fixed;
   transform: translateZ(-3px) scale(4);
   background-image: url("../svg/Cibelle.svg");
@@ -276,7 +184,7 @@ a:hover {
   z-index: -8;
 }
 
-.parallax__layer--face-c {
+.parallax_TP--face-c {
   position: fixed;
   transform: translateZ(-4px) scale(4);
   background-image: url("../svg/Kimi.svg");
@@ -288,7 +196,19 @@ a:hover {
   z-index: -9;
 }
 
-.parallax__layer--logo {
+.parallax_TP--face-d {
+  position: fixed;
+  transform: translateZ(-6px) scale(6);
+  background-image: url("../svg/Cami.svg");
+  margin: auto;
+  margin-top: 1%;
+  right: 0px;
+  width: 12vw;
+  margin-right: 1%;
+  z-index: -9;
+}
+
+.parallax_TP--logo {
   position: fixed;
   transform: translateZ(-3px) scale(4);
   background-image: url("../svg/Oken.svg");
@@ -306,7 +226,7 @@ a:hover {
   z-index: -9;
 }
 
-.parallax__layer--bg {
+.parallax_TP--bg {
   position: fixed;
   transform: translateZ(-5px) scale(6);
   background-image: url("../svg/bg.svg");
