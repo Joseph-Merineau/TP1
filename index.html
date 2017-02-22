@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/anim_svg.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <!--<script src="js/jscript.js"></script>-->
   <body>
@@ -56,34 +55,34 @@
       <div class="parallax_TP parallax_TP-Phonya2"></div>
       <div class="parallax_TP parallax_TP-Oken"></div>
       <div class="parallax_TP parallax_TP-bg"></div>
-      <svg width="300px" height="200px" xml:lang="fr">
+      <svg class="cercle-cyan-conteneur" width="300px" height="200px" xml:lang="fr">
         <circle class="circle-cyan" cx="50" cy="50" r="50" stroke="blue" stroke-width="3" fill="cyan" />
       </svg>
-      <svg width="400px" height="300px" xml:lang="fr">
+      <svg width="800px" height="300px" xml:lang="fr">
         <title>Cercles</title>
         <circle class="circle-rose" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="pink" />
       </svg>
       <div>
       <p>HOVER ICI</p>
-      <svg width="300" height="200">
-        <rect class="rect-orange" width="120" height="80" style="fill:rgba(0,0,0,0.2);stroke-width:6;stroke:rgb(0,50,0)" />
-        <script type="text/javascript">
-            var svg = $("svg");
-            var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
-            circle.setAttribute("r", "36");
-            circle.setAttribute("fill", "black");
-            var ani = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
-            ani.setAttribute("dur", "4s");
-            ani.setAttribute("opacity", "0.4");
-            ani.setAttribute("repeatCount", "indefinite");
-            ani.setAttribute("rotate", "auto");
-            var mpath = document.createElementNS("http://www.w3.org/2000/svg","mpath");
-            mpath.setAttributeNS ("http://www.w3.org/1999/xlink", "href", "#path1");
-            ani.appendChild(mpath);
-            circle.appendChild(ani);
-            svg.append(circle);
-          </script>
-      </svg>
+        <svg width="300" height="200">
+          <rect class="rect-orange" width="300" height="200" style="fill:rgba(0,0,0,0.2);stroke-width:6;stroke:rgb(0,50,0)" />
+            <script type="text/javascript">
+                var svg = $("svg");
+                var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+                circle.setAttribute("r", "36");
+                circle.setAttribute("fill", "black");
+                var ani = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+                ani.setAttribute("dur", "4s");
+                ani.setAttribute("opacity", "0.4");
+                ani.setAttribute("repeatCount", "indefinite");
+                ani.setAttribute("rotate", "auto");
+                var mpath = document.createElementNS("http://www.w3.org/2000/svg","mpath");
+                mpath.setAttributeNS ("http://www.w3.org/1999/xlink", "href", "#path1");
+                ani.appendChild(mpath);
+                circle.appendChild(ani);
+                svg.append(circle);
+              </script>
+        </svg>
       </div>
 
       <svg width="5cm" height="3cm"  viewBox="0 0 500 300">
@@ -109,6 +108,5 @@
     <div class="clearfix"></div>
     <div class="base"></div>
   </div>
-
   </body>
 </html>

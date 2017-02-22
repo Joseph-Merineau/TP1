@@ -1,3 +1,43 @@
+@keyframes opacitescale {
+  0% { opacity: 1; transform: scale(1.0); }
+  10% { opacity: 1; transform: scale(1.0); }
+  15% { opacity: 1; transform: scale(1.0); }
+  90% { opacity: 0; transform: scale(2.0); }
+  100% { opacity: 1; transform: scale(1.0); }
+} 
+
+@keyframes xy {
+  0% { transform: translate(0px, 0px); }
+  12% { transform: translate(200px, 75px); }
+  25% { transform: translate(50px, 50px); }
+  37% { transform: translate(150px, 75px); }
+  50% { transform: translate(100px, 150px); }
+  62% { transform: translate(0px, 100px); }
+  75% { transform: translate(50, 100px); }
+  87% { transform: translate(250px, 25px); }
+  100% { transform: translate(0px, 0px); }
+} 
+
+@keyframes bordure {
+
+    from {stroke-dashoffset: 0;}
+    to {stroke-dashoffset: 1000;}
+
+} 
+
+@keyframes bordurexy {
+  0% { transform: translate(0px, 0px); opacity: 1}
+  12% { transform: translate(200px, 75px); opacity: 0.6 }
+  25% { transform: translate(50px, 50px);opacity: 1}
+  37% { transform: translate(150px, 75px); opacity: 0.6 }
+  50% { transform: translate(100px, 150px);opacity: 1}
+  62% { transform: translate(0px, 100px); opacity: 0.6 }
+  75% { transform: translate(50, 100px);opacity: 1}
+  87% { transform: translate(250px, 25px);opacity: 0.6 }
+  100% { transform: translate(0px, 0px); opacity: 1 }
+} 
+
+
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
   margin: 0;
   padding: 0;
@@ -74,6 +114,10 @@ html {
   max-width: 900px;
 }
 
+.content p:hover {
+  color: black;
+}
+
 a,
 a:visited,
 a:active {
@@ -84,19 +128,36 @@ a:hover {
   color: inherit;
 }
 
-.btn {
-  border-radius: 0px;
-  text-transform: uppercase;
-  border: 2px solid white;
-  font-size: 16px;
-  letter-spacing: 2px;
-  padding: 20px 50px;
+svg{
+  display: block;
+  margin: 1em auto;
 }
 
-.btn:hover {
-  background-color: white;
-  color: #0f1629;
+
+
+.circle-cyan {
+  animation: opacitescale 3s ease infinite;
 }
+
+.circle-rose{
+  animation: xy 3s ease infinite;
+}
+
+.circle-rose:hover{
+  
+  animation: bordurexy 30s linear infinite;
+  
+}
+
+.rect-orange:hover{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: bordure 1s linear infinite;
+}
+
+
+
+
 
 /* Parallax base styles
 --------------------------------------------- */
@@ -233,6 +294,10 @@ a:hover {
   margin: auto;
   margin-top: 76%;
   z-index: -9;
+}
+
+.cercle-cyan-conteneur{
+  border: 2px dashed black;
 }
 
 .parallax_TP-bg {
