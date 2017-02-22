@@ -30,6 +30,20 @@ svg{
 
 } 
 
+@keyframes bordurexy {
+	0% { transform: translate(0px, 0px); opacity: 1}
+	12% { transform: translate(200px, 75px); opacity: 0.6 }
+	25% { transform: translate(50px, 50px);opacity: 1}
+	37% { transform: translate(150px, 75px); opacity: 0.6 }
+	50% { transform: translate(100px, 150px);opacity: 1}
+	62% { transform: translate(0px, 100px); opacity: 0.6 }
+	75% { transform: translate(50, 100px);opacity: 1}
+	87% { transform: translate(250px, 25px);opacity: 0.6 }
+  100% { transform: translate(0px, 0px); opacity: 1 }
+
+
+} 
+
 .circle-cyan {
 	animation: opacitescale 3s ease infinite;
 }
@@ -38,8 +52,14 @@ svg{
 	animation: xy 3s ease infinite;
 }
 
-.rect-orange{
+.circle-rose:hover{
+	
+	animation: bordurexy 30s linear infinite;
+	
+}
+
+.rect-orange:hover{
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 0;
-	animation: bordure 4s ease infinite;
+	animation: bordure 1s linear infinite;
 }
