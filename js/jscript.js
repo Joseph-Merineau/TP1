@@ -1,34 +1,13 @@
-
-	// on cible l'élément « path » que l'on veut animer 
-	var triangle = document.querySelectorAll("#monSVG path")[0];
-	// la longueur du chemin «path»
-	var longueur = triangle.getTotalLength();
-
-	console.log(longueur)
-
-	// La longueur du tracé
-	// https://developer.mozilla.org/en/docs/Web/SVG/Attribute/stroke-dasharray
-
-	triangle.style.strokeDasharray = longueur;
-
-	// On fait disparaître le tracé en appliquant la propriété css strokeDashoffset sur toute la longueur du chemin
-	triangle.style.strokeDashoffset = longueur;
-
-	// extraire la fraction du déplacement de la barre de défilement et  ajusté le tracé
-	window.addEventListener("scroll", maTrace);
-
-	function maTrace() {
-
-		console.log('scrollTop de body = ' + document.body.scrollTop)
-		console.log('scrollTop de documentElement = ' + document.documentElement.scrollTop)
-		console.log('scrollHeight de documentElement = ' + document.documentElement.scrollHeight)	
-		console.log('clientHeight de documentElement = ' + document.documentElement.clientHeight)			
-
-
-	  var fractionDuScroll = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-	  var trace = longueur * fractionDuScroll;
-
-	  // tracé selon la fraction de «scroll»
-	  triangle.style.strokeDashoffset = longueur - trace ;
-	}
+var svg = $("svg");
+var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+circle.setAttribute("r", "5");
+circle.setAttribute("fill", "white");
+var ani = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+ani.setAttribute("dur", "13s");
+ani.setAttribute("repeatCount", "indefinite");
+ani.setAttribute("rotate", "auto");
+var mpath = document.createElementNS("http://www.w3.org/2000/svg","mpath");
+mpath.setAttributeNS ("http://www.w3.org/1999/xlink", "href", "#path1");
+ani.appendChild(mpath);
+circle.appendChild(ani);
+svg.append(circle);

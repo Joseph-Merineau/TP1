@@ -11,7 +11,9 @@
 
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/anim_svg.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
     <!--<script src="js/jscript.js"></script>-->
+    
 
   <body>
 
@@ -64,8 +66,44 @@
       <p>HOVER ICI</p>
       <svg width="300" height="200">
         <rect class="rect-orange" width="120" height="80" style="fill:rgba(0,0,0,0.2);stroke-width:6;stroke:rgb(0,50,0)" />
+        <script type="text/javascript">
+            var svg = $("svg");
+            var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+            circle.setAttribute("r", "36");
+            circle.setAttribute("fill", "black");
+            var ani = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+            ani.setAttribute("dur", "4s");
+            ani.setAttribute("opacity", "0.4");
+            ani.setAttribute("repeatCount", "indefinite");
+            ani.setAttribute("rotate", "auto");
+            var mpath = document.createElementNS("http://www.w3.org/2000/svg","mpath");
+            mpath.setAttributeNS ("http://www.w3.org/1999/xlink", "href", "#path1");
+            ani.appendChild(mpath);
+            circle.appendChild(ani);
+            svg.append(circle);
+          </script>
       </svg>
       </div>
+
+      <svg width="5cm" height="3cm"  viewBox="0 0 500 300">
+        <path id="path1" d="M100,250 C 100,50 400,50 400,250"
+          fill="none" stroke="cyan" stroke-width="7.06"  />
+          <script type="text/javascript">
+            var svg = $("svg");
+            var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+            circle.setAttribute("r", "12");
+            circle.setAttribute("fill", "white");
+            var ani = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+            ani.setAttribute("dur", "13s");
+            ani.setAttribute("repeatCount", "indefinite");
+            ani.setAttribute("rotate", "auto");
+            var mpath = document.createElementNS("http://www.w3.org/2000/svg","mpath");
+            mpath.setAttributeNS ("http://www.w3.org/1999/xlink", "href", "#path1");
+            ani.appendChild(mpath);
+            circle.appendChild(ani);
+            svg.append(circle);
+          </script>
+      </svg>
     </div>
     <div class="clearfix"></div>
     <div class="base"></div>
